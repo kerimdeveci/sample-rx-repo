@@ -18,6 +18,15 @@ profile
 *.hmap
 *.ipa
 
+## App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
 ####
 # Xcode build files
 DerivedData/

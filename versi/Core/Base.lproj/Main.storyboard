@@ -7,33 +7,33 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Search-->
         <scene sceneID="MLT-TX-2Ea">
             <objects>
-                <viewController id="5Wj-ec-wh3" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchVC" id="5Wj-ec-wh3" customClass="SearchVC" customModule="versi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nib-f4-dJV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="run-hf-0Pz"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="rQA-Ba-YCu"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="searchIconSmall" selectedImage="searchIconSmall" id="rQA-Ba-YCu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mpj-tv-OQp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="642" y="445"/>
         </scene>
-        <!--Item 1-->
+        <!--Trending-->
         <scene sceneID="eOU-g3-8B6">
             <objects>
-                <viewController id="IXd-0h-78a" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TrendingFeedVC" id="IXd-0h-78a" customClass="TrendingFeedVC" customModule="versi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tFe-kL-pE6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="azr-Ud-KKF"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="uE6-Vh-Ek9"/>
+                    <tabBarItem key="tabBarItem" title="Trending" image="trendingIcon" selectedImage="trendingIcon" id="uE6-Vh-Ek9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p78-jJ-5DH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -47,6 +47,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.25098039220000001" green="0.0" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.25098039220000001" green="0.0" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="IXd-0h-78a" kind="relationship" relationship="viewControllers" id="XtP-TQ-oD7"/>
@@ -73,4 +75,8 @@
             <point key="canvasLocation" x="1470" y="138"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="searchIconSmall" width="40" height="40"/>
+        <image name="trendingIcon" width="38" height="35"/>
+    </resources>
 </document>

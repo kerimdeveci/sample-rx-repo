@@ -10,10 +10,11 @@
 		5B0604F77C4B000B1707FA02 /* Pods_versi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F740352400E146727A151CB /* Pods_versi.framework */; };
 		C17E212C2440B8D700141A68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17E212B2440B8D700141A68 /* AppDelegate.swift */; };
 		C17E212E2440B8D700141A68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17E212D2440B8D700141A68 /* SceneDelegate.swift */; };
-		C17E21302440B8D700141A68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17E212F2440B8D700141A68 /* ViewController.swift */; };
+		C17E21302440B8D700141A68 /* TrendingFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17E212F2440B8D700141A68 /* TrendingFeedVC.swift */; };
 		C17E21332440B8D700141A68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C17E21312440B8D700141A68 /* Main.storyboard */; };
 		C17E21352440B8DA00141A68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C17E21342440B8DA00141A68 /* Assets.xcassets */; };
 		C17E21382440B8DA00141A68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C17E21362440B8DA00141A68 /* LaunchScreen.storyboard */; };
+		C17E21452440C1E600141A68 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17E21442440C1E600141A68 /* SearchVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,11 +23,12 @@
 		C17E21282440B8D700141A68 /* versi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = versi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C17E212B2440B8D700141A68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C17E212D2440B8D700141A68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C17E212F2440B8D700141A68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C17E212F2440B8D700141A68 /* TrendingFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingFeedVC.swift; sourceTree = "<group>"; };
 		C17E21322440B8D700141A68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C17E21342440B8DA00141A68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C17E21372440B8DA00141A68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C17E21392440B8DA00141A68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C17E21442440C1E600141A68 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		E376A27799BFB282A345F4AD /* Pods-versi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-versi.release.xcconfig"; path = "Target Support Files/Pods-versi/Pods-versi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,7 +94,8 @@
 		C17E213F2440BA5200141A68 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C17E212F2440B8D700141A68 /* ViewController.swift */,
+				C17E212F2440B8D700141A68 /* TrendingFeedVC.swift */,
+				C17E21442440C1E600141A68 /* SearchVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -246,7 +249,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C17E21302440B8D700141A68 /* ViewController.swift in Sources */,
+				C17E21452440C1E600141A68 /* SearchVC.swift in Sources */,
+				C17E21302440B8D700141A68 /* TrendingFeedVC.swift in Sources */,
 				C17E212C2440B8D700141A68 /* AppDelegate.swift in Sources */,
 				C17E212E2440B8D700141A68 /* SceneDelegate.swift in Sources */,
 			);

@@ -7,40 +7,37 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
-class TrendingFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TrendingFeedVC: UIViewController{
 
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var trendingTableView: UITableView!
+    let disposeBag = DisposeBag()
+    var dataSource = PublishSubject<[Repo]>()
+    
+    let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        self.trendingTableView.delegate = self
-        self.trendingTableView.dataSource = self
-        DownloadService.instance.downloadTrendingReposDictArray { dictionary in
-            print("finished downloading")
+        
+        trendingTableView.refreshControl = refreshControl
+        refreshControl.tintColor = #colorLiteral(red: 0.2784313725, green: 0.462745098, blue: 0.9019607843, alpha: 1)
+        refreshControl.attributedTitle = NSAttributedString(string: "Fetching Hot Github Repos 🔥", attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.2784313725, green: 0.462745098, blue: 0.9019607843, alpha: 1), NSAttributedString.Key.font: UIFont(name: "AvenirNext-DemiBold", size: 16.0)!])
+        refreshControl.addTarget(self, action: #selector(fetchData), for: .valueChanged)
+        
+        fetchData()
+        dataSource.bind(to: trendingTableView.rx.items(cellIdentifier: "TrendingRepoCell")) {
+            (row, repo: Repo, cell: TrendingRepoCell) in
+            cell.configure(with: repo)
+        }.disposed(by: disposeBag)
+    }
+    
+    @objc func fetchData() {
+        DownloadService.instance.downloadTrendingRepos { (trendingRepoArray) in
+            self.dataSource.onNext(trendingRepoArray)
+            self.refreshControl.endRefreshing()
         }
     }
-
-}
-
-extension TrendingFeedVC{
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier:"TrendingRepoCell")
-                as? TrendingRepoCell {
-            cell.configure(with: Repo(image: UIImage(named: "searchIconLarge")!, name: "SWIFT", description: "programming language", numberOfForks: 562, language: "Shifty", numberOfContributors: 12, repoUrl: "www.github.com"))
-            return cell
-        }
-        return UITableViewCell()
-    }
-    func numberOfSections(in tableView: UITableView) -> Int {
-        1
-    }
-    
 }

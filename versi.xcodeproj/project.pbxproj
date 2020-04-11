@@ -21,6 +21,7 @@
 		C17E21352440B8DA00141A68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C17E21342440B8DA00141A68 /* Assets.xcassets */; };
 		C17E21382440B8DA00141A68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C17E21362440B8DA00141A68 /* LaunchScreen.storyboard */; };
 		C17E21452440C1E600141A68 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17E21442440C1E600141A68 /* SearchVC.swift */; };
+		C1957A9224426F5E00642285 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1957A9124426F5E00642285 /* SearchCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		C17E21372440B8DA00141A68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C17E21392440B8DA00141A68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C17E21442440C1E600141A68 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		C1957A9124426F5E00642285 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		E376A27799BFB282A345F4AD /* Pods-versi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-versi.release.xcconfig"; path = "Target Support Files/Pods-versi/Pods-versi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +146,7 @@
 				74D777F0DF49E068754EF583 /* RoundedBorderButton.swift */,
 				74D77B0BCF8AC6B7508F5A86 /* RoundedBorderTextField.swift */,
 				74D7737F6F2E4B0D01EF9105 /* TrendingRepoCell.swift */,
+				C1957A9124426F5E00642285 /* SearchCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C17E21452440C1E600141A68 /* SearchVC.swift in Sources */,
+				C1957A9224426F5E00642285 /* SearchCell.swift in Sources */,
 				C17E21302440B8D700141A68 /* TrendingFeedVC.swift in Sources */,
 				C17E212C2440B8D700141A68 /* AppDelegate.swift in Sources */,
 				C17E212E2440B8D700141A68 /* SceneDelegate.swift in Sources */,

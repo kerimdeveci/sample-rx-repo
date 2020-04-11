@@ -11,26 +11,39 @@ class DownloadService {
     static let instance = DownloadService()
     
     func downloadTrendingReposDictArray(completion: @escaping (_ reposDictArray: [Dictionary<String, Any>]) -> ()) {
-        var trendingReposArray = [Dictionary<String, Any>]()
         
-       AF.request(trendingRepoUrl).responseJSON { (response) in
-    
+        var trendingReposArray = [Dictionary<String, Any>]()
+        AF.request(trendingRepoUrl).responseJSON { (response) in
             switch response.result {
             case .success(let trendingRepos):
                 guard let json = trendingRepos as? Dictionary<String, Any> else { return }
                 guard let repoDictionaryArray = json["items"] as? [Dictionary<String, Any>] else { return }
                 for repoDict in repoDictionaryArray {
                     if trendingReposArray.count <= 9 {
-                        guard let name = repoDict["name"] as? String,
-                              let description = repoDict["description"] as? String,
-                              let numberOfForks = repoDict["forks_count"] as? Int,
-                              let language = repoDict["language"] as? String,
-                              let repoUrl = repoDict["html_url"] as? String,
-                              let contributorsUrl = repoDict["contributors_url"] as? String,
-                              let ownerDict = repoDict["owner"] as? Dictionary<String, Any>,
-                              let avatarUrl = ownerDict["avatar_url"] as? String else { break }
-                        
-                        let repoDictionary: Dictionary<String, Any> = ["name": name, "description": description, "forks_count": numberOfForks, "language": language, "html_url": repoUrl, "contributors_url": contributorsUrl, "avatar_url": avatarUrl]
+                        var repoDictionary = Dictionary<String, Any> ()
+                        if let name = repoDict["name"] as? String {
+                            repoDictionary["name"] = name
+                        }
+                        if let description = repoDict["description"] as? String{
+                            repoDictionary["description"] = description
+                        }
+                        if let numberOfForks = repoDict["forks_count"] as? Int{
+                            repoDictionary["forks_count"] = numberOfForks
+                        }
+                        if let language = repoDict["language"] as? String{
+                            repoDictionary["language"] = language
+                        }else {repoDictionary["language"] = "No Language" }
+                        if let repoUrl = repoDict["html_url"] as? String{
+                            repoDictionary["html_url"] = repoUrl
+                        }
+                        if let contributorsUrl = repoDict["contributors_url"] as? String{
+                             repoDictionary["contributors_url"] = contributorsUrl
+                        }
+                        if let ownerDict = repoDict["owner"] as? Dictionary<String, Any>{
+                            if let avatarUrl = ownerDict["avatar_url"] as? String {
+                                repoDictionary["avatar_url"] = avatarUrl
+                            }
+                        }
                         
                         trendingReposArray.append(repoDictionary)
                     } else {
@@ -94,7 +107,10 @@ class DownloadService {
     func downloadContributorsDataFor(contributorsUrl: String, completion: @escaping (_ contributors: Int) -> ()) {
         AF.request(contributorsUrl).responseJSON { (response) in
             if case .success(let json) = response.result {
-                guard let jsonDic = json as? [Dictionary<String, Any>] else { return }
+                guard let jsonDic = json as? [Dictionary<String, Any>] else {
+                    completion(0)
+                    return
+                }
                 if !jsonDic.isEmpty {
                     let contributions = jsonDic.count
                     completion(contributions)
@@ -102,20 +118,4 @@ class DownloadService {
             }
         }
     }
-    
-    
-//    func downloadTrendingReposDictionaryArray(completion: @escaping (_ reposDictionaryArray: [String:Any]) -> () ) {
-//        Session.default.request(trendingRepoUrl).responseJSON { (response) in
-//            switch response.result {
-//            var trendingReposArray = [[String:Any]]()
-//            case .success(let value):
-//                if let JSON = value as? [String: Any] {
-//                    guard let reposDictionaryArray = JSON["items"] as? [[String:Any]] else { return }
-//                    print(reposDictionaryArray)
-//                }
-//            case .failure(let error): break
-//                    // error handling
-//            }
-//        }
-//    }
 }

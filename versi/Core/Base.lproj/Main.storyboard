@@ -338,7 +338,7 @@
                                             <outlet property="repoDescription" destination="Mas-JB-xhL" id="qiW-47-pEE"/>
                                             <outlet property="repoImage" destination="nqJ-l6-txM" id="5r9-gV-0K4"/>
                                             <outlet property="repoName" destination="shQ-g9-Sf3" id="rN1-Cv-hjS"/>
-                                            <outlet property="viewReadmeButton" destination="bKz-w0-WX2" id="CQS-pF-zKd"/>
+                                            <outlet property="viewReadmeButton" destination="blh-XY-ia4" id="zUL-3L-tyq"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

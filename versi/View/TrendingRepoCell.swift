@@ -3,8 +3,9 @@
 // Copyright (c) 2020 Kerim Deveci. All rights reserved.
 //
 
-import Foundation
 import UIKit
+import RxCocoa
+import RxSwift
 
 class TrendingRepoCell: UITableViewCell {
     
@@ -15,8 +16,9 @@ class TrendingRepoCell: UITableViewCell {
     @IBOutlet weak var languageLabel: UILabel!
     @IBOutlet weak var contributionCount: UILabel!
     @IBOutlet weak var backView: UIView!
-    @IBOutlet weak var viewReadmeButton: UIView!
+    @IBOutlet weak var viewReadmeButton: UIButton!
     var repoUrl: String?
+    let disposeBag = DisposeBag()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,6 +36,14 @@ class TrendingRepoCell: UITableViewCell {
     }
     
     func configure(with repo: Repo){
+        
+        viewReadmeButton.rx.tap.subscribe(onNext: {
+            [weak self] in
+            guard let self = self else { return }
+            self.window?.rootViewController?.presentSafariWebViewFor(url: self.repoUrl!)
+            }).disposed(by: disposeBag)
+        
+        
         repoImage.image = repo.image
         repoDescription.text = repo.description
         repoName.text = repo.name

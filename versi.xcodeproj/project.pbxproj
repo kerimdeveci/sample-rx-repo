@@ -22,6 +22,9 @@
 		C17E21382440B8DA00141A68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C17E21362440B8DA00141A68 /* LaunchScreen.storyboard */; };
 		C17E21452440C1E600141A68 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17E21442440C1E600141A68 /* SearchVC.swift */; };
 		C1957A9224426F5E00642285 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1957A9124426F5E00642285 /* SearchCell.swift */; };
+		C1957A96244282F900642285 /* DateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1957A93244282F800642285 /* DateExt.swift */; };
+		C1957A97244282F900642285 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1957A94244282F900642285 /* UIViewControllerExt.swift */; };
+		C1957A98244282F900642285 /* UIButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1957A95244282F900642285 /* UIButtonExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		C17E21392440B8DA00141A68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C17E21442440C1E600141A68 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		C1957A9124426F5E00642285 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		C1957A93244282F800642285 /* DateExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExt.swift; sourceTree = "<group>"; };
+		C1957A94244282F900642285 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
+		C1957A95244282F900642285 /* UIButtonExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExt.swift; sourceTree = "<group>"; };
 		E376A27799BFB282A345F4AD /* Pods-versi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-versi.release.xcconfig"; path = "Target Support Files/Pods-versi/Pods-versi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +118,7 @@
 		C17E212A2440B8D700141A68 /* versi */ = {
 			isa = PBXGroup;
 			children = (
+				C1957A992442831300642285 /* Extensions */,
 				C17E21432440BDB700141A68 /* Resources */,
 				C17E21422440BD9F00141A68 /* Core */,
 				C17E21412440BA6300141A68 /* View */,
@@ -169,6 +176,16 @@
 				C17E21342440B8DA00141A68 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C1957A992442831300642285 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C1957A93244282F800642285 /* DateExt.swift */,
+				C1957A95244282F900642285 /* UIButtonExt.swift */,
+				C1957A94244282F900642285 /* UIViewControllerExt.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,12 +308,15 @@
 				C17E21302440B8D700141A68 /* TrendingFeedVC.swift in Sources */,
 				C17E212C2440B8D700141A68 /* AppDelegate.swift in Sources */,
 				C17E212E2440B8D700141A68 /* SceneDelegate.swift in Sources */,
+				C1957A98244282F900642285 /* UIButtonExt.swift in Sources */,
 				74D77B7BDDC6C21A9A6DAE3D /* RoundedBorderButton.swift in Sources */,
 				74D77F114BE2930AC0DC455D /* RoundedBorderTextField.swift in Sources */,
 				74D77376BDBACF5A1BB4798F /* Repo.swift in Sources */,
 				74D775B54A619724ABE0CD1D /* TrendingRepoCell.swift in Sources */,
+				C1957A97244282F900642285 /* UIViewControllerExt.swift in Sources */,
 				74D7720A57A98CF175F3C7B2 /* Constants.swift in Sources */,
 				74D77F11EC6ED47AAE2DCEB5 /* DownloadService.swift in Sources */,
+				C1957A96244282F900642285 /* DateExt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

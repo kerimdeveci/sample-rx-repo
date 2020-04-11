@@ -65,7 +65,8 @@ extension SearchVC {
         tableView.deselectRow(at: indexPath, animated: false)
         
         guard let cell = tableView.cellForRow(at: indexPath) as? SearchCell else { return }
-        print(cell.repoUrl as Any)
+        let url = cell.repoUrl ?? ""
+        self.presentSafariWebViewFor(url: url)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

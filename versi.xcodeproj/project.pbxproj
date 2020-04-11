@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5B0604F77C4B000B1707FA02 /* Pods_versi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F740352400E146727A151CB /* Pods_versi.framework */; };
+		74D7720A57A98CF175F3C7B2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D771D9283E20A1C9FCEF8D /* Constants.swift */; };
+		74D77376BDBACF5A1BB4798F /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D7771762C0F568FBFA0F65 /* Repo.swift */; };
+		74D775B54A619724ABE0CD1D /* TrendingRepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D7737F6F2E4B0D01EF9105 /* TrendingRepoCell.swift */; };
+		74D77B7BDDC6C21A9A6DAE3D /* RoundedBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D777F0DF49E068754EF583 /* RoundedBorderButton.swift */; };
+		74D77F114BE2930AC0DC455D /* RoundedBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D77B0BCF8AC6B7508F5A86 /* RoundedBorderTextField.swift */; };
+		74D77F11EC6ED47AAE2DCEB5 /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D77B7F51536FE0CE1C3FF8 /* DownloadService.swift */; };
 		C17E212C2440B8D700141A68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17E212B2440B8D700141A68 /* AppDelegate.swift */; };
 		C17E212E2440B8D700141A68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17E212D2440B8D700141A68 /* SceneDelegate.swift */; };
 		C17E21302440B8D700141A68 /* TrendingFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17E212F2440B8D700141A68 /* TrendingFeedVC.swift */; };
@@ -19,6 +25,12 @@
 
 /* Begin PBXFileReference section */
 		2F740352400E146727A151CB /* Pods_versi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_versi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74D771D9283E20A1C9FCEF8D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		74D7737F6F2E4B0D01EF9105 /* TrendingRepoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingRepoCell.swift; sourceTree = "<group>"; };
+		74D7771762C0F568FBFA0F65 /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		74D777F0DF49E068754EF583 /* RoundedBorderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedBorderButton.swift; sourceTree = "<group>"; };
+		74D77B0BCF8AC6B7508F5A86 /* RoundedBorderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedBorderTextField.swift; sourceTree = "<group>"; };
+		74D77B7F51536FE0CE1C3FF8 /* DownloadService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
 		AC37952B41BAFD6FE4E80D49 /* Pods-versi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-versi.debug.xcconfig"; path = "Target Support Files/Pods-versi/Pods-versi.debug.xcconfig"; sourceTree = "<group>"; };
 		C17E21282440B8D700141A68 /* versi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = versi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C17E212B2440B8D700141A68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +73,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		74D7710A24B9AB6DD04A0C54 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				74D77B7F51536FE0CE1C3FF8 /* DownloadService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		74D77A1CA730472637BE0BF6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				74D771D9283E20A1C9FCEF8D /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		C17E211F2440B8D700141A68 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +115,8 @@
 				C17E21412440BA6300141A68 /* View */,
 				C17E21402440BA5C00141A68 /* Model */,
 				C17E213F2440BA5200141A68 /* Controller */,
+				74D77A1CA730472637BE0BF6 /* Utils */,
+				74D7710A24B9AB6DD04A0C54 /* Services */,
 			);
 			path = versi;
 			sourceTree = "<group>";
@@ -103,6 +133,7 @@
 		C17E21402440BA5C00141A68 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				74D7771762C0F568FBFA0F65 /* Repo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -110,6 +141,9 @@
 		C17E21412440BA6300141A68 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				74D777F0DF49E068754EF583 /* RoundedBorderButton.swift */,
+				74D77B0BCF8AC6B7508F5A86 /* RoundedBorderTextField.swift */,
+				74D7737F6F2E4B0D01EF9105 /* TrendingRepoCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -253,6 +287,12 @@
 				C17E21302440B8D700141A68 /* TrendingFeedVC.swift in Sources */,
 				C17E212C2440B8D700141A68 /* AppDelegate.swift in Sources */,
 				C17E212E2440B8D700141A68 /* SceneDelegate.swift in Sources */,
+				74D77B7BDDC6C21A9A6DAE3D /* RoundedBorderButton.swift in Sources */,
+				74D77F114BE2930AC0DC455D /* RoundedBorderTextField.swift in Sources */,
+				74D77376BDBACF5A1BB4798F /* Repo.swift in Sources */,
+				74D775B54A619724ABE0CD1D /* TrendingRepoCell.swift in Sources */,
+				74D7720A57A98CF175F3C7B2 /* Constants.swift in Sources */,
+				74D77F11EC6ED47AAE2DCEB5 /* DownloadService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
